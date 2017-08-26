@@ -1,0 +1,8 @@
+android/demo/.gradle/*
+android/demo/gradle/*
+android/demo/.idea/*
+android/demo/build/*
+android/demo/demo.iml
+android/demo/app/app.iml
+android/demo/app/build/*
+
