@@ -3,6 +3,7 @@ package in.peerreview.demo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 /********  Sample activity to be cloned...\
@@ -33,11 +34,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import in.peerreview.demo.External.RunTimePermission;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG ="Dipankar" ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RunTimePermission.setup(this);
+        RunTimePermission.askPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE, new RunTimePermission.IPermissionCallbacks() {
+            @Override
+            public void success() {
+                Log.d(TAG,"Success callback executed!");
+            }
+
+            @Override
+            public void failure() {
+                Log.d(TAG,"error callback executed!");
+            }
+        });
     }
     public void Action(View v) {
         Class c=null;
