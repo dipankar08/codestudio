@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="আমি তোমাকে ভালোবাসি"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_height="wrap_content" />
+    <in.peerreview.demo.Custom.CustomFontTextView
+        android:layout_width="wrap_content"
+        app:fontName="BenSenHandwriting.ttf"
+        android:text="আমি তোমাকে ভালোবাসি"
+        android:textSize="34dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_height="wrap_content" />
+
+    <in.peerreview.demo.Custom.CustomRoundedImageView
+        android:layout_height="wrap_content"
+        android:src="@drawable/rdb"
+        android:layout_width="wrap_content">
+    </in.peerreview.demo.Custom.CustomRoundedImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/profile"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+</LinearLayout>

@@ -5,22 +5,52 @@
     android:orientation="vertical"
     android:background="@android:color/white"
     android:gravity="center_horizontal">
+    <!--Sample -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <Button
+        android:text="Common problem" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/drawables"
+            android:text="Drawables"
+            android:onClick="Action"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/jni"
+            android:text="Test JNI"
+            android:onClick="Action"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--UI design -->
+    <TextView
         android:layout_width="wrap_content"
-        android:id="@+id/drawables"
-        android:text="Drawables"
-        android:onClick="Action"
-        android:layout_margin="3dp"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_width="wrap_content"
-        android:id="@+id/jni"
-        android:text="Test JNI"
-        android:onClick="Action"
-        android:layout_margin="3dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Common problem" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/ui1"
+            android:text="UI1"
+            android:onClick="Action"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/ui2"
+            android:text="UI2"
+            android:onClick="Action"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>
