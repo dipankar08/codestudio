@@ -1,5 +1,6 @@
 package in.peerreview.demo;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +35,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import in.peerreview.demo.External.AudioRecorder;
 import in.peerreview.demo.External.RunTimePermission;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,17 +46,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         RunTimePermission.setup(this);
-        RunTimePermission.askPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE, new RunTimePermission.IPermissionCallbacks() {
-            @Override
-            public void success() {
-                Log.d(TAG,"Success callback executed!");
-            }
+        RunTimePermission.askPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,null);
+        RunTimePermission.askPermission(Manifest.permission.READ_EXTERNAL_STORAGE,null);
+        RunTimePermission.askPermission(Manifest.permission.RECORD_AUDIO,null);
 
-            @Override
-            public void failure() {
-                Log.d(TAG,"error callback executed!");
-            }
-        });
+        AudioRecorder.setup(this);
+        AudioRecorder.test();
     }
     public void Action(View v) {
         Class c=null;

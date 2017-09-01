@@ -66,7 +66,9 @@ public class RunTimePermission {
 
         } else{
             Log.d(TAG,"Already granted!");
-            callback.success();
+            if(callback != null) {
+                callback.success();
+            }
         }
     }
     public static void processResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -77,7 +79,7 @@ public class RunTimePermission {
                     Log.d(TAG,"Already success!");
                     look.success();
             } else {
-                    Log.d(TAG,"failed");
+                    Log.d(TAG,">>>>>>>>>>>>>>>>>>>>>>>   Permission failed <<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
                     look.failure();
             }
         }
